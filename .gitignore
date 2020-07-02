@@ -1,0 +1,7 @@
+.idea
+.gradle
+local.properties
+*.iml
+/build
+dagger-compiler-shadow/build
+dagger-library-shadow/build

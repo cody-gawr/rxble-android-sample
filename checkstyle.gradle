@@ -1,0 +1,20 @@
+subprojects { project ->
+    group = GROUP
+    version = VERSION_NAME
+
+    apply plugin: 'checkstyle'
+
+    checkstyle {
+        toolVersion = '8.20'
+    }
+
+    task checkstyle(type: Checkstyle) {
+        configFile rootProject.file('checkstyle.xml')
+        source 'src/main/java'
+        ignoreFailures false
+        showViolations true
+        include '**/*.java'
+
+        classpath = files()
+    }
+}

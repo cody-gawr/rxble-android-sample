@@ -1,0 +1,25 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "com.github.jengelman.gradle.plugins:shadow:$rootProject.ext.shadowPluginVersion"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+def buildSrcDir = '../gradle'
+apply from: "${buildSrcDir}/shadow.gradle"
+
+import com.github.jengelman.gradle.plugins.shadow.transformers.ServiceFileTransformer
+shadowJar {
+    mustRunAfter jar
+    transform(ServiceFileTransformer)
+    classifier = ''
+}
+
+dependencies {
+    implementation rootProject.ext.libs.dagger_compiler
+}

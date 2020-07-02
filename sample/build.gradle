@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        applicationId "com.polidea.rxandroidble.sample"
+        minSdkVersion 18
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
+dependencies {
+    implementation project(path: ':rxandroidble')
+    implementation rootProject.ext.libs.appcompat
+    implementation rootProject.ext.libs.material_design
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    implementation rootProject.ext.libs.rxandroid
+    implementation rootProject.ext.libs.rxjava
+    implementation rootProject.ext.libs.rxjava_binding
+    implementation rootProject.ext.libs.rxjava_replayingshare
+}
