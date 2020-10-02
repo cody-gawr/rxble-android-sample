@@ -1,4 +1,4 @@
-# RxAndroidBle [![Build Status](https://travis-ci.org/Polidea/RxAndroidBle.svg?branch=master)](https://travis-ci.org/Polidea/RxAndroidBle) [![Maven Central](https://img.shields.io/maven-central/v/com.polidea.rxandroidble2/rxandroidble.svg)](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.polidea.rxandroidble2%22%20AND%20a%3A%22rxandroidble%22)
+# RxAndroidBle
 <p align="center">
   <img 
     alt="Tailored software services including concept, design, development and testing"
@@ -15,13 +15,6 @@ RxAndroidBle is a powerful painkiller for Android's Bluetooth Low Energy headach
  * Fancy asynchronous operations support (read, write, notifications)
  * Threading management in order to meet Android contracts
  * Connection and operation error handling
-
-For support head to [StackOverflow #rxandroidble](http://stackoverflow.com/questions/tagged/rxandroidble?sort=active)
-
-Read the official announcement at [Polidea Blog](https://www.polidea.com/blog/RXAndroidBLE/).
-
-## RxAndroidBLE @ Mobile Central Europe 2016
-[![RxAndroidBLE @ Mobile Central Europe 2016](https://img.youtube.com/vi/0aKfUGCxUDM/0.jpg)](https://www.youtube.com/watch?v=0aKfUGCxUDM)
 
 ## Usage
 ### Obtaining the client
@@ -363,60 +356,3 @@ Using RxAndroidBle enables you to test your application easily.
 
 ### Unit tests
 Most of the objects that the library uses are implementations of interfaces which can be mocked.
-
-Alternatively one could use `MockRxAndroidBle` (more info below). Note: Using `MockRxAndroidBle` in unit tests needs [Robolectric](https://github.com/robolectric/robolectric).
-
-### Integration tests
-Sometimes there is a need to develop the application without the access to a physical device. We have created [MockRxAndroidBle](https://github.com/Polidea/RxAndroidBle/tree/master/mockrxandroidble) as a drop-in addon for mocking a simple peripheral.
-
-Unfortunately it is not under active development—PRs are welcomed though. ;)
-
-## [Small performance comparison](https://github.com/Polidea/RxAndroidBle/issues/41#issuecomment-333513707)
-
-## Contributing
-If you would like to contribute code you can do so through GitHub by forking the repository and sending a pull request.
-
-When submitting code, please make every effort to follow existing conventions and style in order to keep the code as readable as possible. Please also make sure your code compiles by running ```./gradlew clean checkstyle test```.
-
-## FAQ
-If you encounter seemingly incorrect behaviour in your application that is regarding this library please check the below list of Frequently Asked Questions:
-- [Cannot connect](https://github.com/Polidea/RxAndroidBle/wiki/FAQ:-Cannot-connect)
-- [UndeliverableException](https://github.com/Polidea/RxAndroidBle/wiki/FAQ:-UndeliverableException)
-
-## Support
-* non-commercial — head to [StackOverflow #rxandroidble](https://stackoverflow.com/questions/tagged/rxandroidble)
-* commercial — drop an email to hello@polidea.com for more info
-
-[Contact us](https://www.polidea.com/project/?utm_source=Github&utm_medium=Npaid&utm_campaign=Kontakt&utm_term=Code&utm_content=GH_NOP_KKT_COD_RAB001)
-
-Learn more about Polidea's BLE services [here](https://www.polidea.com/services/ble/?utm_source=Github&utm_medium=Npaid&utm_campaign=Tech_BLE&utm_term=Code&utm_content=GH_NOP_BLE_COD_RAB001)
-
-## Discussions
-Want to talk about it? Join our discussion on [Gitter](https://gitter.im/RxBLELibraries/RxAndroidBle)
-
-## Maintainers
-* Dariusz Seweryn (github: dariuszseweryn)
-
-## [Contributors](https://github.com/Polidea/RxAndroidBle/graphs/contributors), thank you!
-
-## License
-
-    Copyright 2016 Polidea Sp. z o.o
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-
-
-
-## Maintained by
-
-[![Polidea](https://raw.githubusercontent.com/Polidea/RxAndroidBle/master/site/polidea_logo.png "Tailored software services including concept, design, development and testing")](http://www.polidea.com)
